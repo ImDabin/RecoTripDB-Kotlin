@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="mint_chip">#B2EFE2</color>
+    <color name="gray_chip">#B3C8CF</color>
+    <color name="mainblue">#6FA0D9</color> <!-- 메인 하늘색 -->
+    <color name="bgblue">#D6EEF8</color> <!-- 연한 하늘색 (배경용) -->
+    <color name="impblue">#024CAA</color> <!-- 강조용 하늘색 -->
+    <color name="txtgray">#9AA6B2</color> <!-- 텍스트용 다크 그레이 -->
+
+    <!-- ✅ 다크모드 연동을 위한 기본 색상 추가 -->
+    <color name="background">#FFFFFF</color>
+    <color name="textPrimary">#000000</color>
+</resources>

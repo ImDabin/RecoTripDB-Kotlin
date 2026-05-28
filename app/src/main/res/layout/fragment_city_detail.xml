@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layoutCityDetailContent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progressBarDetailLoading"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/textLoadingMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="도시 정보를 불러오는 중입니다"
+            android:textSize="14sp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 도시명 및 즐겨찾기 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:id="@+id/textCityName"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="도쿄, 일본"
+                android:textColor="@color/mainblue"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+            <!-- 공유 버튼 -->
+            <ImageButton
+                android:id="@+id/btnShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_share"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+            <ImageButton
+                android:id="@+id/btnFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_favorite_border"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+        </LinearLayout>
+
+        <!-- 도시 대표 이미지 -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageCity"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_city"
+            android:layout_marginBottom="16dp"
+            app:shapeAppearanceOverlay="@style/ImageRoundStyle" />
+
+
+        <!-- 도시 소개 -->
+        <TextView
+            android:id="@+id/textDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="도쿄는 전통과 현대가 공존하는 일본의 수도입니다."
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 키워드 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="추천 키워드"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupKeywords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:chipSpacing="8dp"
+            app:singleLine="false"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 월별 날씨 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="날씨 정보"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+        <TextView
+            android:id="@+id/textWeather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1월 평균 5.2도"
+            android:layout_marginBottom="8dp" />
+        <Switch
+            android:id="@+id/switchMonthlyWeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="월별 날씨 보기"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 비자 정보 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="비자 정보"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+        <TextView
+            android:id="@+id/textVisa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="한국인은 무비자 90일 체류 가능"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 비행 시간 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="비행 시간"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+        <TextView
+            android:id="@+id/textFlight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="약 2시간 30분"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 물가 정보 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="현지 물가 정보"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+        <TextView
+            android:id="@+id/textPriceInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="한 끼 평균 12,000원 / 대중교통 약 1,200원"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 주요 명소 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="주요 명소"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+        <LinearLayout
+            android:id="@+id/layoutLandmarks"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 유저 한줄평 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="다녀온 사람들의 한 줄 평"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+        <TextView
+            android:id="@+id/textUserReview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="야경이 정말 멋졌어요!"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 플랜 짜기 버튼 -->
+        <Button
+            android:id="@+id/btnCreatePlan"
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/mainblue"
+            android:layout_height="wrap_content"
+            android:text="플랜 생성하기" />
+
+        <!-- 비슷한 도시 추천 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="비슷한 도시 추천"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+        <LinearLayout
+            android:id="@+id/layoutSimilarCities"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

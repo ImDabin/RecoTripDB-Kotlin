@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="16dp">
+
+    <!-- 도시명 -->
+    <TextView
+        android:id="@+id/tvCityTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="도시명 텍스트 자리"
+        android:textSize="20sp"
+        android:textColor="@color/mainblue"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <!-- 키워드 표시 -->
+    <TextView
+        android:id="@+id/tvSelectedKeywords"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="키워드: 쇼핑, 휴양"
+        android:textSize="14sp"
+        android:textColor="@color/mainblue"
+        android:layout_marginBottom="12dp" />
+
+    <!-- 검색창 -->
+    <EditText
+        android:id="@+id/etLandmarkSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="관광지를 검색해보세요!"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 관광지 리스트 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 하단 버튼 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="8dp">
+
+
+        <Button
+            android:id="@+id/btnNext"
+            android:backgroundTint="@color/mainblue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="다음" />
+    </LinearLayout>
+
+</LinearLayout>

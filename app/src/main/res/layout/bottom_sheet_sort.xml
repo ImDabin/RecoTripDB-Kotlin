@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textSortTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="정렬 선택"
+        android:textSize="18sp"
+        android:textColor="@color/mainblue"
+        android:textStyle="bold"
+        android:paddingBottom="12dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        android:layout_marginBottom="12dp" />
+
+    <!-- 정렬 옵션 리스트 -->
+    <TextView
+        android:id="@+id/optionLike"
+        style="@style/SortOption"
+        android:text="좋아요순" />
+
+    <TextView
+        android:id="@+id/optionComment"
+        style="@style/SortOption"
+        android:text="댓글 많은 순" />
+
+    <TextView
+        android:id="@+id/optionNewest"
+        style="@style/SortOption"
+        android:text="최신순" />
+
+    <TextView
+        android:id="@+id/optionOldest"
+        style="@style/SortOption"
+        android:text="오래된 순" />
+
+</LinearLayout>

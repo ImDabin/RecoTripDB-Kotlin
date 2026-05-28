@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background">
+
+    <!-- 제목 -->
+    <TextView
+        android:id="@+id/textFinalTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="최종 여행 플랜"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainblue"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 일정 리스트 (가로 스크롤 RecyclerView) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFinalSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:overScrollMode="never" />
+
+    <!-- 지도 -->
+    <ImageView
+        android:id="@+id/imageMapPreview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="24dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/route_map_dummy_a"
+        android:contentDescription="경로 지도" />
+
+    <!-- 저장 버튼 -->
+    <Button
+        android:id="@+id/buttonSavePlan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="플랜 저장"
+        android:backgroundTint="@color/mainblue"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

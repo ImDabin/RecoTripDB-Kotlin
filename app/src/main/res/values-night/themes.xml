@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.RecoTrip" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/mainblue</item>
+        <item name="background">@color/background</item>
+        <item name="colorOnBackground">@color/textPrimary</item>
+    </style>
+</resources>

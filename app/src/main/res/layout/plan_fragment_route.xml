@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@color/background">
+
+    <!-- 상단 제목 -->
+    <TextView
+        android:id="@+id/tvRouteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="초기 동선"
+        android:textSize="20sp"
+        android:textColor="@color/mainblue"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <!-- 플랜 선택 버튼 -->
+    <LinearLayout
+        android:id="@+id/planSelectorLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvRouteTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnPlanA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/mainblue"
+            android:text="플랜 A"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnPlanB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/mainblue"
+            android:text="플랜 B"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnPlanC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/mainblue"
+            android:text="플랜 C" />
+    </LinearLayout>
+
+    <!-- 관광지 리스트 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRoutePlan"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintTop_toBottomOf="@id/planSelectorLayout"
+        app:layout_constraintBottom_toTopOf="@id/imageMapPreview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 더미 지도 이미지 -->
+    <ImageView
+        android:id="@+id/imageMapPreview"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/route_map_dummy_a"
+        app:layout_constraintBottom_toTopOf="@id/bottomButtonLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 하단 버튼 -->
+    <LinearLayout
+        android:id="@+id/bottomButtonLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/mainblue"
+            android:layout_weight="1"
+            android:text="플랜 A 선택" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

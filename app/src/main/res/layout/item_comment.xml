@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/commentRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/bgblue"
+    android:padding="12dp">
+
+    <!-- 작성자 -->
+    <TextView
+        android:id="@+id/textCommentAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="작성자 이름"
+        android:textSize="13sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="2dp"/>
+
+    <!-- 댓글 본문 -->
+    <TextView
+        android:id="@+id/textComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="댓글 내용"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="4dp" />
+
+    <!-- 하단 정보: 작성일 + 답글쓰기 + 더보기 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/textCommentDate"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:text="2025.04.14. 22:28"
+            android:textSize="12sp"
+            android:textColor="#888888" />
+
+        <TextView
+            android:id="@+id/textReply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="답글쓰기"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="center_vertical" />
+
+        <ImageButton
+            android:id="@+id/buttonMore"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_more_hori"
+            android:contentDescription="더보기"
+            android:tint="#888888" />
+    </LinearLayout>
+
+    <!-- 🔽 대댓글 입력창이 여기에 동적으로 들어감 -->
+    <LinearLayout
+        android:id="@+id/replyInputContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+</LinearLayout>

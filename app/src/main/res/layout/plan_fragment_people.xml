@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="@color/background">
+
+    <!-- 제목 -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="몇 명이서 가시나요?"
+        android:textSize="20sp"
+        android:textColor="@color/mainblue"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp" />
+
+    <!-- 성인 인원 선택 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="성인"
+            android:textSize="16sp"
+            android:layout_marginEnd="24dp" />
+
+        <ImageButton
+            android:id="@+id/btnAdultMinus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_minus"
+            android:background="@android:color/transparent"
+            android:contentDescription="성인 감소"
+            android:scaleType="centerInside"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/tvAdultCount"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="8dp" />
+
+        <ImageButton
+            android:id="@+id/btnAdultPlus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_plus"
+            android:background="@android:color/transparent"
+            android:contentDescription="성인 추가"
+            android:scaleType="centerInside"
+            android:padding="4dp" />
+    </LinearLayout>
+
+    <!-- 아동 인원 선택 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아동"
+            android:textSize="16sp"
+            android:layout_marginEnd="24dp" />
+
+        <ImageButton
+            android:id="@+id/btnChildMinus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_minus"
+            android:background="@android:color/transparent"
+            android:contentDescription="아동 감소"
+            android:scaleType="centerInside"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/tvChildCount"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="8dp" />
+
+        <ImageButton
+            android:id="@+id/btnChildPlus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_plus"
+            android:background="@android:color/transparent"
+            android:contentDescription="아동 추가"
+            android:scaleType="centerInside"
+            android:padding="4dp" />
+    </LinearLayout>
+
+    <!-- 다음 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnNext"
+            android:backgroundTint="@color/mainblue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="다음" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewSelectedCity"
+            android:text="선택된 도시: 없음"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/mainblue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textCurrentSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="정렬: 좋아요순"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:textColor="@color/mainblue"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPosts"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="24dp"
+            android:clipToPadding="false" />
+    </LinearLayout>
+
+    <!-- 글쓰기 버튼 -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:backgroundTint="@color/mainblue"
+        android:layout_margin="24dp"
+        android:contentDescription="게시물 추가"
+        android:src="@drawable/ic_add" />
+
+    <!-- 정렬 버튼 (새로 추가) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="24dp"
+        android:backgroundTint="@color/mainblue"
+        android:contentDescription="정렬"
+        android:src="@drawable/ic_sort" />
+</FrameLayout>

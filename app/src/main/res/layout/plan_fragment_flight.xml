@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="@color/background">
+
+    <!-- 제목 -->
+    <TextView
+        android:id="@+id/tvFlightTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비행기 시간을 입력하세요"
+        android:textColor="@color/mainblue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp" />
+
+    <TextView
+        android:id="@+id/StartDayTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="여행 가는 날"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp" />
+
+    <!-- 여행 가는 날 출발 시간 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+        <Button
+            android:id="@+id/btnDepartureTimeGoing"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/mainblue"
+            android:text="출발 시간"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- 여행 가는 날 도착 시간 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+        <Button
+            android:id="@+id/btnArrivalTimeGoing"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/mainblue"
+            android:text="도착 시간"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/EndDayTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="여행 마치는 날"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp" />
+
+    <!-- 여행 돌아오는 날 출발 시간 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+        <Button
+            android:id="@+id/btnDepartureTimeReturning"
+            android:layout_width="120dp"
+            android:backgroundTint="@color/mainblue"
+            android:layout_height="40dp"
+            android:text="출발 시간"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- 여행 돌아오는 날 도착 시간 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+        <Button
+            android:id="@+id/btnArrivalTimeReturning"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/mainblue"
+            android:text="도착 시간"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- 이전 / 다음 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/mainblue"
+            android:text="다음" />
+    </LinearLayout>
+
+</LinearLayout>
